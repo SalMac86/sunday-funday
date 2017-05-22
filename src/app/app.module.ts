@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { OrganizationsPage } from '../pages/organizations/organizations';
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
+import { UserDetailsPage } from '../pages/user-details/user-details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +17,8 @@ let injectables = [
     MyApp,
     UsersPage,
     ReposPage,
-    OrganizationsPage
+    OrganizationsPage,
+    UserDetailsPage
   ];
 
 @NgModule({
