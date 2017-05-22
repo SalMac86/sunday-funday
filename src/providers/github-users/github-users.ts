@@ -21,7 +21,12 @@ export class GithubUsersProvider {
   
   //this is where we're going to add our method
   load(): Observable<User[]> {
-    return this.http.get(this.githubApiUrl + '/users')
+    return this.http.get(`${this.githubApiUrl}/users`)
     .map(res => <User[]>res.json());
+  }
+  
+  loadUser(login: string): Observable<User> {
+    return this.http.get(`${this.githubApiUrl}/users/${login}`)
+    .map(res => <User>res.json());
   }
 }
